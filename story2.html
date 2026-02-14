@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story 2 - Strategic Product Placement Analysis</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">Strategic Product Placement Analysis</div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">Dashboard</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="story1.html" class="nav-link active">Stories ▼</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="story1.html" class="dropdown-link">Story 1</a></li>
+                        <li><a href="story2.html" class="dropdown-link active">Story 2</a></li>
+                        <li><a href="story3.html" class="dropdown-link">Story 3</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="story-section">
+                <h1 class="page-title">Data Story Analysis - Story 2</h1>
+                <div class="iframe-container">
+                    <div id="tableauViz"></div>
+                </div>
+                
+                <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+                <script type="text/javascript">
+                    var viz;
+                    function initViz() {
+                        var containerDiv = document.getElementById("tableauViz"),
+                            url = "https://public.tableau.com/views/StrategicProductPlacementAnalysis_17698394945200/Story2",
+                            options = {
+                                hideTabs: true,
+                                hideToolbar: false,
+                                onFirstInteractive: function () {
+                                    console.log("Tableau viz loaded");
+                                }
+                            };
+                        viz = new tableau.Viz(containerDiv, url, options);
+                    }
+                    document.addEventListener("DOMContentLoaded", initViz);
+                </script>
+                
+                <div class="story-navigation">
+                    <a href="story1.html" class="btn btn-secondary">← Previous Story</a>
+                    <a href="story3.html" class="btn btn-secondary">Next Story →</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Strategic Product Placement Analysis. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
