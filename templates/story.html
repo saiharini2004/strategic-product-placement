@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Story Analysis - Strategic Product Placement Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">Strategic Product Placement Analysis</div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="{{ url_for('index') }}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('dashboard') }}" class="nav-link">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('story') }}" class="nav-link active">Story</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="story-section">
+                <h1 class="page-title">Data Story Analysis</h1>
+                <div class="iframe-container">
+                    <iframe 
+                        src="https://public.tableau.com/views/StrategicProductPlacementAnalysis_17698394945200/Story1?:language=en-US&:display_count=n&:origin=viz_share_link"
+                        width="100%" 
+                        height="800px"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Strategic Product Placement Analysis. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
